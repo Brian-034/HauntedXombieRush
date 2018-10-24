@@ -53,8 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\MovigObject.cs" />
+     <Compile Include="Assets\Scripts\MovingObject.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\RockObstacle.cs" />
      <None Include="Assets\3D\zombie\models\animation list.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Unity/Unity 2018 game development/Haunted-Zombie-Rush/Zombie-rush/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

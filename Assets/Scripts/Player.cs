@@ -4,20 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
-    [SerializeField] float jumpForce = 100f;
+    [SerializeField] float jumpForce = 10f;
 
-    private Rigidbody rigidbody;
+    private string paramIsDead = "isDead";
+    private string paramYVelocity = "yVelocity";
+
+    private Rigidbody myRigidbody;
+    private Animator myAnimator;
 
     private bool isJumping;
 
-	// Use this for initialization
 	void Start () {
-        rigidbody = GetComponent<Rigidbody>();
+        myRigidbody = GetComponent<Rigidbody>();
+        myAnimator = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
         CheckForInput();
+        UpdateAnimator();
 	}
 
     private void FixedUpdate()
@@ -30,8 +34,8 @@ public class Player : MonoBehaviour {
         if (isJumping)
         {
             isJumping = false;
-            rigidbody.velocity = new Vector2(0, 0);
-            rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode.Impulse);
+            myRigidbody.velocity = new Vector2(0, 0);
+            myRigidbody.AddForce(new Vector2(0, jumpForce), ForceMode.Impulse);
         }
     }
 
@@ -41,5 +45,9 @@ public class Player : MonoBehaviour {
         {
             isJumping = true;
         }
+    }
+    private void UpdateAnimator()
+    {
+        myAnimator.SetFloat(paramYVelocity, myRigidbody.velocity.y);
     }
 }
