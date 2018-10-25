@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114935087943352896}
   m_Layer: 0
   m_Name: RockObstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342890272469986}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7403741, y: 14.88, z: 2.7}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 62.55, y: 16.69, z: 2.7}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2acc5395ae0096a4bb722e427be5a934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.5
   startPosition: 75
   resetPosition: -15
-  topPosition: {x: 0, y: 16, z: 0}
+  topPosition: {x: 0, y: 20, z: 0}
   bottomPosition: {x: 0, y: 10, z: 0}
   rockSpeed: 1
 --- !u!136 &136855781327710132
